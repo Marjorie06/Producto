@@ -5,8 +5,6 @@
 package com.mycompany.producto.Constrolador;
 
 import com.mycompany.producto.Modelo.GestorProducto;
-import com.mycompany.producto.Modelo.Producto;
-import com.mycompany.producto.Vista.ListaProducto;
 import com.mycompany.producto.Vista.Vista;
 
 /**
@@ -14,13 +12,13 @@ import com.mycompany.producto.Vista.Vista;
  * @author Marjorie
  */
 public class Controlador {
-    
-    private Vista Producto;
+ 
+    private Vista vista;
     private GestorProducto gestorProducto;
     private ListaProducto listarIU;
     
-    public Controlador(Vista Producto, ListaProducto listarIU) {
-        this.Producto = Producto;
+    public Controlador(Vista vista, ListaProducto listarIU) {
+        this.vista = vista;
         this.listarIU= listarIU;
         //Cambia el constructor de la clase modelo
         
@@ -50,16 +48,16 @@ public class Controlador {
 
         try {
             String msm = "";
-            Producto[] tareas = new Producto [5];
-            tareas = gestorProducto.listarTareas();
-            if (tareas != null) {
+            Producto[] Productos= new Producto [5];
+            Productos = gestorProducto.listaProducto();
+            if (Productos != null) {
                 String lista = "";
-                for (int i = 0; i < tareas.length; i++) {
-                    if (tareas[i] != null) {
-                        lista = lista + "id:" + tareas[i].getId() + "\n"
-                                + "Titulo:" + tareas[i].getTitulo() + "\n"
-                                + "Descripcion:" + tareas[i].getDescripcion() + "\n"
-                                + "Estado:" + tareas[i].getEstado() + "\n";
+                for (int i = 0; i < producto.length; i++) {
+                    if (Productos[i] != null) {
+                        lista = lista + "id:" + Productos[i].getId() + "\n"
+                                + "Titulo:" + Productos[i].getNombre() + "\n"
+                                + "Descripcion:" + Productos[i].getPrecio() + "\n"
+                                + "Estado:" + Productos[i].getDisponibilidad() + "\n";
                     }
                 }
                 msm = lista;
@@ -72,5 +70,3 @@ public class Controlador {
             System.out.println("Error Controlador-listarTarea: " + e);
         }
     }
-    
-}

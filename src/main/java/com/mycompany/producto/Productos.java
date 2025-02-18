@@ -10,10 +10,11 @@ import com.mycompany.producto.Vista.Vista;
  *
  * @author Marjorie
  */
-public class Producto {
+public class Productos {
 
     public static void main(String[] args) {
         Vista objVista  = new Vista();
         objVista.setVisible(true);
-    }
+
+ }
 }

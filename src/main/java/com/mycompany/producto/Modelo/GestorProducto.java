@@ -4,6 +4,8 @@
  */
 package com.mycompany.producto.Modelo;
 
+import com.mycompany.producto.Productos;
+
 /**
  *
  * @author Marjorie
@@ -14,7 +16,7 @@ public class GestorProducto {
     Producto[] Producto = new Producto[tamanoVector];
     int cont = 0;
 
-    public String agregarProducto(Producto Producto) {
+    public String agregarProducto(Productos Productos) {
         String msg = "Ingreso exitoso";
         if (Producto.length != cont) {
             for (int i = 0; i < Producto.length; i++) {
@@ -24,7 +26,7 @@ public class GestorProducto {
                     Producto[i].setId(i);
                     Producto[i].setNombre(Producto.getNombre());
                     Producto[i].setPrecio(Producto.getPrecio());
-                    Producto[i].setDispnible(Producto.getDisponible());
+                    Producto[i].setDisponible(Producto.getDisponible());
                     cont++;
                     return msg;
                 }
@@ -34,9 +36,9 @@ public class GestorProducto {
         }
         return msg;
     }
-        public Producto[] listarTareas() {
+        public Producto[] listarProductos() {
 
-        Producto[] auxTareas = new Producto[tamanoVector];
+        Producto[] auxProducto = new Producto[tamanoVector];
         for (int i = 0; i < cont; i++) {
 
             //if (tareas[i].getEstado()) {
@@ -48,6 +50,6 @@ public class GestorProducto {
             System.out.println("Modelo-listarProducto" + auxProducto[i].getDisponible());
             // }
         }
-        return auxTareas;
+        return auxProducto;
     }
 }
