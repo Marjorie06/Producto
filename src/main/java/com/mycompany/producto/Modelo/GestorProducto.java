@@ -16,7 +16,7 @@ public class GestorProducto {
     Producto[] Producto = new Producto[tamanoVector];
     int cont = 0;
 
-    public String agregarProducto(Productos Productos) {
+    public String agregarProducto(Producto Productos) {
         String msg = "Ingreso exitoso";
         if (Producto.length != cont) {
             for (int i = 0; i < Producto.length; i++) {
@@ -24,9 +24,9 @@ public class GestorProducto {
                     //inicializar el objeto
                     Producto[i] = new Producto();
                     Producto[i].setId(i);
-                    Producto[i].setNombre(Producto.getNombre());
-                    Producto[i].setPrecio(Producto.getPrecio());
-                    Producto[i].setDisponible(Producto.getDisponible());
+                    Producto[i].setNombre(Productos.getNombre());
+                    Producto[i].setPrecio(Productos.getPrecio());
+                    Producto[i].setDisponible(Productos.getDisponible());
                     cont++;
                     return msg;
                 }

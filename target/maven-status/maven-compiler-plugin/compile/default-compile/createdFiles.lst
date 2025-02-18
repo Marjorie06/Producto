@@ -1,0 +1,15 @@
+com\mycompany\producto\Productos.class
+com\mycompany\producto\Constrolador\Controlador.class
+com\mycompany\producto\Modelo\GestorProducto.class
+com\mycompany\producto\Tester\TesterVista.class
+com\mycompany\producto\Vista\Vista.class
+com\mycompany\producto\Vista\ListarProductos.class
+com\mycompany\producto\Vista\Vista$2.class
+com\mycompany\producto\Vista\ListarProductos$2.class
+com\mycompany\producto\Modelo\Producto.class
+com\mycompany\producto\Vista\Vista$3.class
+com\mycompany\producto\Vista\ListarProductos$3.class
+com\mycompany\producto\Vista\Vista$1.class
+com\mycompany\producto\Tester\TesterControlador.class
+com\mycompany\producto\Vista\ListarProductos$1.class
+com\mycompany\producto\Vista\Vista$4.class
