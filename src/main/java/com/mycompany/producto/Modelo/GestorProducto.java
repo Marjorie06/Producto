@@ -11,20 +11,20 @@ package com.mycompany.producto.Modelo;
 public class GestorProducto {
     
    int tamanoVector = 5;
-    Producto[] tareas = new Producto[tamanoVector];
+    Producto[] Producto = new Producto[tamanoVector];
     int cont = 0;
 
-    public String agregarTarea(Producto tarea) {
+    public String agregarProducto(Producto Producto) {
         String msg = "Ingreso exitoso";
-        if (tareas.length != cont) {
-            for (int i = 0; i < tareas.length; i++) {
-                if (tareas[i] == null) {
+        if (Producto.length != cont) {
+            for (int i = 0; i < Producto.length; i++) {
+                if (Producto[i] == null) {
                     //inicializar el objeto
-                    tareas[i] = new Producto();
-                    tareas[i].setId(i);
-                    tareas[i].setTitulo(tarea.getTitulo());
-                    tareas[i].setDescripcion(tarea.getDescripcion());
-                    tareas[i].setEstado(tarea.getEstado());
+                    Producto[i] = new Producto();
+                    Producto[i].setId(i);
+                    Producto[i].setNombre(Producto.getNombre());
+                    Producto[i].setPrecio(Producto.getPrecio());
+                    Producto[i].setDispnible(Producto.getDisponible());
                     cont++;
                     return msg;
                 }
@@ -40,12 +40,12 @@ public class GestorProducto {
         for (int i = 0; i < cont; i++) {
 
             //if (tareas[i].getEstado()) {
-            auxTareas[i] = new Producto();
-            auxTareas[i].setId(tareas[i].getId());
-            auxTareas[i].setTitulo(tareas[i].getTitulo());
-            auxTareas[i].setDescripcion(tareas[i].getDescripcion());
-            auxTareas[i].setEstado(tareas[i].getEstado());
-            System.out.println("Modelo-listarTarea" + auxTareas[i].getEstado());
+            auxProducto[i] = new Producto();
+            auxProducto[i].setId(Producto[i].getId());
+            auxProducto[i].setNombre(Producto[i].getNombre());
+            auxProducto[i].setPrecio(Producto[i].getPrecio());
+            auxProducto[i].setDisponible(Producto[i].getDisponible());
+            System.out.println("Modelo-listarProducto" + auxProducto[i].getDisponible());
             // }
         }
         return auxTareas;

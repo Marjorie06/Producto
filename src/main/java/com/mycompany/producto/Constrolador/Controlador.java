@@ -6,6 +6,7 @@ package com.mycompany.producto.Constrolador;
 
 import com.mycompany.producto.Modelo.GestorProducto;
 import com.mycompany.producto.Modelo.Producto;
+import com.mycompany.producto.Vista.ListaProducto;
 import com.mycompany.producto.Vista.Vista;
 
 /**
@@ -14,42 +15,43 @@ import com.mycompany.producto.Vista.Vista;
  */
 public class Controlador {
     
-    private Vista principal;
-    private GestorProducto gestorTarea;
+    private Vista Producto;
+    private GestorProducto gestorProducto;
     private ListaProducto listarIU;
     
-    public Controlador(Vista principal, ListaProducto listarIU) {
-        this.principal = principal;
+    public Controlador(Vista Producto, ListaProducto listarIU) {
+        this.Producto = Producto;
         this.listarIU= listarIU;
         //Cambia el constructor de la clase modelo
-        this.gestorTarea = new GestorProducto();
+        
+        this.gestorProducto = new GestorProducto();
     }
     
-    public void agregarTarea() {
+    public void agregarProducto() {
 
         try {
-            if (this.principal != null) {
-                Producto objTarea = new Producto();
-                objTarea.setTitulo(this.principal.getTitulo());
-                objTarea.setDescripcion(this.principal.getDescripcion());
-                objTarea.setEstado(this.principal.getEstado());
-                String msm = gestorTarea.agregarTarea(objTarea);
-                principal.error(msm);
+            if (this.Producto != null) {
+                Producto objProducto = new Producto();
+                objProducto.setTitulo(this.Producto.getTitulo());
+                objProducto.setDescripcion(this.Producto.getDescripcion());
+                objProducto.setEstado(this.Producto.getEstado());
+                String msm = gestorProducto.agregarProducto(objProducto);
+                Producto.error(msm);
 
             } else {
-                principal.error("Completa los datos!");
+                Producto.error("Completa los datos!");
             }
         } catch (Exception e) {
-            principal.error("Error controlado:" + e);
+            Producto.error("Error controlado:" + e);
         }
     }
     
-     public void listarTarea() {
+     public void listaProducto() {
 
         try {
             String msm = "";
             Producto[] tareas = new Producto [5];
-            tareas = gestorTarea.listarTareas();
+            tareas = gestorProducto.listarTareas();
             if (tareas != null) {
                 String lista = "";
                 for (int i = 0; i < tareas.length; i++) {

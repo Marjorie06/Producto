@@ -135,11 +135,11 @@ public class Vista extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtProductoActionPerformed
    public String getTitulo(){
-        return textTituloTarea.getText();
+        return txtProducto.getText();
     }
     
     public String getDescripcion(){
-        return textAreaDescripcion.getText();
+        return txtPrecio.getText();
     }
     
     public boolean getEstado(){
@@ -152,8 +152,8 @@ public class Vista extends javax.swing.JPanel {
     
     public void limpiar(){
     
-    textTitulo.setText("");
-    textAreaDescripcion.setText("");
+    txtProducto.setText("");
+    txtPrecio.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

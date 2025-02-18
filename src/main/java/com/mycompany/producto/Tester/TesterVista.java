@@ -11,23 +11,23 @@ import com.mycompany.producto.Vista.Vista;
  * @author Marjorie
  */
 public class TesterVista {
-      private Vista principal;
+      private  Vista Producto;
 
-    public TesterVista(Vista principal) {
-        this.principal = principal;
+    public TesterVista(Vista Producto) {
+        this.Producto = Producto;
     }
 
     public void prueba() {
         //Principal principal=new Vista();
         try {
-            System.out.println("Titulo: " + principal.getTitulo());
-            System.out.println("Descripcion: " + principal.getDescripcion());
-            System.out.println("Estado: " + principal.getEstado());
+            System.out.println("Titulo: " + Producto.getNombre());
+            System.out.println("Descripcion: " + Producto.getPrecio());
+            System.out.println("Estado: " + Producto.getDisponible());
 
         } catch (NumberFormatException e) {
             
             
-            //vista.mostrarError("Error");
+            //vista.mostrarError("Error") ;
         }
 
     }

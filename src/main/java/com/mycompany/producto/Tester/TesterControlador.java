@@ -12,9 +12,9 @@ import com.mycompany.producto.Modelo.Producto;
  */
 public class TesterControlador {
      public void prueba(Producto objTarea) {
-        System.out.println("Titulo: " + objTarea.getTitulo());
-        System.out.println("Descripcion: " + objTarea.getDescripcion());
-        System.out.println("Estado: " + objTarea.getEstado());
+        System.out.println("Nombre: " + objTarea.getNombre());
+        System.out.println("Precio: " + objTarea.getPrecio());
+        System.out.println("Estado: " + objTarea.getDisponible());
     }
     
 }

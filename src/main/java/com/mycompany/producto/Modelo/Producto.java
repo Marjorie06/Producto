@@ -11,15 +11,16 @@ package com.mycompany.producto.Modelo;
 public class Producto {
     
       private int id;
-    private String titulo;
-    private String descripcion;
-    private boolean estado;
+    private String nombre;
+    private String precio;
+    private boolean disponible;
+    int length;
 
-    public Producto (int id, String titulo, String descripcion, boolean estado) {
+    public Producto (int id, String nombre, String precio, boolean disponible) {
         this.id = id;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.estado = estado;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.disponible = disponible;
     }
 
     public Producto() {
@@ -33,27 +34,27 @@ public class Producto {
         this.id = id;
     }
      public String getTitulo() {
-        return titulo;
+        return nombre;
     }
 
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return precio;
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        this.precio = precio;
     }
 
     public boolean getEstado() {
-        return estado;
+        return disponible;
     }
     
     public void setEstado(boolean estado) {
-        this.estado = estado;
+        this.disponible = disponible;
     }
 
 }
